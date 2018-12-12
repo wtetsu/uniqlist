@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/wtetsu/uniqlist.svg?branch=master)](https://travis-ci.org/wtetsu/uniqlist)
 [![Code Climate](https://codeclimate.com/github/wtetsu/uniqlist/badges/gpa.svg)](https://codeclimate.com/github/wtetsu/uniqlist)
+[![npm version](https://badge.fury.io/js/uniqlist.svg)](https://badge.fury.io/js/uniqlist)
 
 ## Install
 
