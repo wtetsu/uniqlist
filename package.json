@@ -1,0 +1,25 @@
+{
+  "name": "uniqarray",
+  "version": "1.0.0",
+  "description": "Cannot add duplicated values",
+  "main": "uniqarray.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-cov": "npm test -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtetsu/uniqarray.git"
+  },
+  "author": "wtetsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wtetsu/uniqarray/issues"
+  },
+  "homepage": "https://github.com/wtetsu/uniqarray#readme",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "jest": "^23.6.0"
+  }
+}
