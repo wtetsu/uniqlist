@@ -1,5 +1,8 @@
 # UniqArray
 
+[![Build Status](https://travis-ci.org/wtetsu/uniqarray.svg?branch=master)](https://travis-ci.org/wtetsu/uniqarray)
+[![Code Climate](https://codeclimate.com/github/wtetsu/uniqarray/badges/gpa.svg)](https://codeclimate.com/github/wtetsu/uniqarray)
+
 ## Install
 
 ```
