@@ -1,8 +1,8 @@
 {
   "name": "uniqlist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cannot add duplicated values",
-  "main": "uniqlist.js",
+  "main": "src/uniqlist.js",
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
