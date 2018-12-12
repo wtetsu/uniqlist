@@ -1,45 +1,45 @@
-# UniqArray
+# UniqList
 
-[![Build Status](https://travis-ci.org/wtetsu/uniqarray.svg?branch=master)](https://travis-ci.org/wtetsu/uniqarray)
-[![Code Climate](https://codeclimate.com/github/wtetsu/uniqarray/badges/gpa.svg)](https://codeclimate.com/github/wtetsu/uniqarray)
+[![Build Status](https://travis-ci.org/wtetsu/uniqlist.svg?branch=master)](https://travis-ci.org/wtetsu/uniqlist)
+[![Code Climate](https://codeclimate.com/github/wtetsu/uniqlist/badges/gpa.svg)](https://codeclimate.com/github/wtetsu/uniqlist)
 
 ## Install
 
 ```
-npm install uniqarray
+npm install uniqlist
 ```
 
 ## How to use
 
 ```js
-const UniqArray = require("uniqarray");
+const UniqList = require("uniqlist");
 
-const ua = new UniqArray();
-ua.push(10);
-ua.push(10);
-ua.push(11);
-ua.push(11);
-ua.push(11);
+const ul = new UniqList();
+ul.push(10);
+ul.push(10);
+ul.push(11);
+ul.push(11);
+ul.push(11);
 
-ua.size(); // 2
-ua.get(0); // 10
-ua.get(1); // 11
+ul.size(); // 2
+ul.get(0); // 10
+ul.get(1); // 11
 
-const arr = ua.toArray(); // a normal array
+const arr = ul.toArray(); // a normal array
 ```
 
 ```js
-const ua = new UniqArray();
-ua.push({ msg: "hello!" }, "key10");
-ua.push({ msg: "hello!!" }, "key10");
-ua.push({ msg: "hello!!!" }, "key10");
-ua.push({ msg: "hello?" }, "key11");
-ua.push({ msg: "hello??" }, "key11");
-ua.push({ msg: "hello???" }, "key11");
+const ul = new UniqList();
+ul.push({ msg: "hello!" }, "key10");
+ul.push({ msg: "hello!!" }, "key10");
+ul.push({ msg: "hello!!!" }, "key10");
+ul.push({ msg: "hello?" }, "key11");
+ul.push({ msg: "hello??" }, "key11");
+ul.push({ msg: "hello???" }, "key11");
 
-ua.size(); // 2
-ua.get(0).msg; // "hello!"
-ua.get(1).msg; // "hello?"
+ul.size(); // 2
+ul.get(0).msg; // "hello!"
+ul.get(1).msg; // "hello?"
 
-const arr = ua.toArray(); // a normal array
+const arr = ul.toArray(); // a normal array
 ```

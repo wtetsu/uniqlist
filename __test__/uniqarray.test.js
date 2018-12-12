@@ -1,7 +1,7 @@
-const UniqArray = require("../src/uniqarray");
+const UniqList = require("../src/uniqlist");
 
 test("", () => {
-  const ua = new UniqArray();
+  const ua = new UniqList();
   expect(ua.array.length).toEqual(0);
 
   ua.push(10);
@@ -31,7 +31,7 @@ test("", () => {
 });
 
 test("", () => {
-  const ua = new UniqArray();
+  const ua = new UniqList();
   expect(ua.size()).toEqual(0);
 
   ua.push({ msg: "hello!" }, 10);
@@ -50,7 +50,7 @@ test("", () => {
 });
 
 test("", () => {
-  const ua = new UniqArray();
+  const ua = new UniqList();
   ua.filter = (e, k) => e % 2 == 0;
 
   expect(ua.size()).toEqual(0);
