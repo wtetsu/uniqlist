@@ -31,7 +31,7 @@ class UniqArray {
     this.keys.add(actualKey);
   }
 
-  merge(anotherArray, keys) {
+  merge(anotherArray, keys = []) {
     for (let i = 0; i < anotherArray.length; i++) {
       this.push(anotherArray[i], keys[i]);
     }
