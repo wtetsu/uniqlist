@@ -1,6 +1,6 @@
 {
   "name": "uniqlist",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cannot add duplicated values",
   "main": "src/uniqlist.js",
   "scripts": {
