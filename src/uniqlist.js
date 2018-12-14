@@ -1,5 +1,5 @@
 /**
- * UniqArray (https://github.com/wtetsu/uniqarray/)
+ * UniqArray (https://github.com/wtetsu/uniqlist/)
  * Copyright 2018-present wtetsu
  * Licensed under MIT
  */
