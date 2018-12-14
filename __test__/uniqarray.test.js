@@ -1,89 +1,89 @@
 const UniqList = require("../src/uniqlist");
 
 test("", () => {
-  const ua = new UniqList();
-  expect(ua.array.length).toEqual(0);
+  const ul = new UniqList();
+  expect(ul.array.length).toEqual(0);
 
-  ua.push(10);
-  ua.push(11);
-  ua.push(12);
+  ul.push(10);
+  ul.push(11);
+  ul.push(12);
 
-  expect(ua.size()).toEqual(3);
-  expect(ua.get(0)).toEqual(10);
-  expect(ua.get(1)).toEqual(11);
-  expect(ua.get(2)).toEqual(12);
+  expect(ul.size()).toEqual(3);
+  expect(ul.get(0)).toEqual(10);
+  expect(ul.get(1)).toEqual(11);
+  expect(ul.get(2)).toEqual(12);
 
-  ua.push(11);
-  ua.push(12);
-  ua.push(13);
-  expect(ua.get(3)).toEqual(13);
+  ul.push(11);
+  ul.push(12);
+  ul.push(13);
+  expect(ul.get(3)).toEqual(13);
 
-  expect(ua.size()).toEqual(4);
+  expect(ul.size()).toEqual(4);
 
-  ua.push("11");
-  ua.push("12");
-  ua.push("13");
+  ul.push("11");
+  ul.push("12");
+  ul.push("13");
 
-  expect(ua.size()).toEqual(7);
+  expect(ul.size()).toEqual(7);
 
-  ua.toArray()[0] = 999;
-  expect(ua.get(0)).toEqual(10);
+  ul.toArray()[0] = 999;
+  expect(ul.get(0)).toEqual(10);
 });
 
 test("", () => {
-  const ua = new UniqList();
-  expect(ua.size()).toEqual(0);
+  const ul = new UniqList();
+  expect(ul.size()).toEqual(0);
 
-  ua.push({ msg: "hello!" }, 10);
-  ua.push({ msg: "hello!!" }, 10);
-  ua.push({ msg: "hello!!!" }, 10);
+  ul.push({ msg: "hello!" }, 10);
+  ul.push({ msg: "hello!!" }, 10);
+  ul.push({ msg: "hello!!!" }, 10);
 
-  expect(ua.size()).toEqual(1);
-  expect(ua.array[0].msg).toEqual("hello!");
+  expect(ul.size()).toEqual(1);
+  expect(ul.array[0].msg).toEqual("hello!");
 
-  ua.merge([{ msg: "hello?" }, { msg: "hello??" }], [11, 12]);
+  ul.merge([{ msg: "hello?" }, { msg: "hello??" }], [11, 12]);
 
-  expect(ua.size()).toEqual(3);
-  expect(ua.array[0].msg).toEqual("hello!");
-  expect(ua.array[1].msg).toEqual("hello?");
-  expect(ua.array[2].msg).toEqual("hello??");
+  expect(ul.size()).toEqual(3);
+  expect(ul.array[0].msg).toEqual("hello!");
+  expect(ul.array[1].msg).toEqual("hello?");
+  expect(ul.array[2].msg).toEqual("hello??");
 });
 
 test("", () => {
-  const ua = new UniqList();
-  ua.filter = (e, k) => e % 2 == 0;
+  const ul = new UniqList();
+  ul.filter = (e, k) => e % 2 == 0;
 
-  expect(ua.size()).toEqual(0);
+  expect(ul.size()).toEqual(0);
 
-  ua.push(41);
-  ua.push(43);
-  ua.push(45);
+  ul.push(41);
+  ul.push(43);
+  ul.push(45);
 
-  expect(ua.size()).toEqual(0);
+  expect(ul.size()).toEqual(0);
 
-  ua.push(46);
+  ul.push(46);
 
-  expect(ua.size()).toEqual(1);
-  expect(ua.array[0]).toEqual(46);
+  expect(ul.size()).toEqual(1);
+  expect(ul.array[0]).toEqual(46);
 });
 
 test("", () => {
-  const ua = new UniqList();
-  ua.filter = a => a % 2 == 0;
-  expect(ua.array.length).toEqual(0);
+  const ul = new UniqList();
+  ul.filter = a => a % 2 == 0;
+  expect(ul.array.length).toEqual(0);
 
-  ua.push(1);
-  ua.push(3);
-  ua.push(5);
+  ul.push(1);
+  ul.push(3);
+  ul.push(5);
 
-  expect(ua.array.length).toEqual(0);
+  expect(ul.array.length).toEqual(0);
 
-  ua.push(1);
-  ua.push(2);
-  ua.push(3);
-  ua.push(4);
+  ul.push(1);
+  ul.push(2);
+  ul.push(3);
+  ul.push(4);
 
-  expect(ua.array.length).toEqual(2);
-  expect(ua.array[0]).toEqual(2);
-  expect(ua.array[1]).toEqual(4);
+  expect(ul.array.length).toEqual(2);
+  expect(ul.array[0]).toEqual(2);
+  expect(ul.array[1]).toEqual(4);
 });
