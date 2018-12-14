@@ -66,3 +66,24 @@ test("", () => {
   expect(ua.size()).toEqual(1);
   expect(ua.array[0]).toEqual(46);
 });
+
+test("", () => {
+  const ua = new UniqList();
+  ua.filter = a => a % 2 == 0;
+  expect(ua.array.length).toEqual(0);
+
+  ua.push(1);
+  ua.push(3);
+  ua.push(5);
+
+  expect(ua.array.length).toEqual(0);
+
+  ua.push(1);
+  ua.push(2);
+  ua.push(3);
+  ua.push(4);
+
+  expect(ua.array.length).toEqual(2);
+  expect(ua.array[0]).toEqual(2);
+  expect(ua.array[1]).toEqual(4);
+});
