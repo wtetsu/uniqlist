@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/wtetsu/uniqlist#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "jest": "^24.8.0"
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0"
   }
 }
